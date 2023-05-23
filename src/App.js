@@ -1,10 +1,10 @@
-import UseClickExample from "./hooks/useClick";
+import UsePreventExample from "./hooks/usePreventLeave";
 import { useState } from "react";
 
 const App = () => {
   return (
     <div>
-      <UseClickExample />
+      <UsePreventExample />
     </div>
   );
 };

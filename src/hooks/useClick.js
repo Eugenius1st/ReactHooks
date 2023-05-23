@@ -3,15 +3,15 @@ import { useEffect, useState, useRef } from "react";
 const useClick = (onClick) => {
   const element = useRef();
   useEffect(() => {
-    // ComponentDidMount 되었을 때 click 이벤트를 추가
+    // ComponentDidMount,ComponentDidUpdate 되었을 때 click 이벤트를 추가
     if (element.current) element.current.addEventListener("click", onClick);
     return () => {
-      // ComponentwillUnMount 되었을 때 호출된다.
+      // ComponentwillUnMount 되었을 때 이벤트를 정리한다.
       if (element.current)
         element.current.removeEventListener("click", onClick);
     };
   }, []);
-  // 이렇게 함수를 return 하는 이유는, component가 mount 되지않았을 때 eventListener가 배치되지 않게 하도록 하기 위해서
+  // 이렇게 함수를 return 하는 이유는, component가 mount 되지않았을 때 eventListener가 배치되지 않게 하도록 하기 위해서(함수를 return 받음)
   return element;
 };
 //useRef?: reference는 기본적으로 Component의 어떤 부분을 선택할 수 있는 방법이다.
