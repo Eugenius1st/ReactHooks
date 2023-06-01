@@ -1,5 +1,11 @@
+import UseFadeInExample from "./hooks/useFadeIn";
+
 const App = () => {
-  return <div></div>;
+  return (
+    <div>
+      <UseFadeInExample />
+    </div>
+  );
 };
 
 export default App;

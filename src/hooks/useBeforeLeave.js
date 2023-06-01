@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-// 함수형 프로그래밍
+// 개발자 모드의 데스크탑 상태에서만 가능하다
 
 export const useBeforeLeave = (onBefore) => {
   // if (typeof onBefore !== "function") {
