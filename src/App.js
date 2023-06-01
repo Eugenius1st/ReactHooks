@@ -1,9 +1,9 @@
-import UseFadeInExample from "./hooks/useFadeIn";
+import UseNetworkExample from "./hooks/useNetwork";
 
 const App = () => {
   return (
     <div>
-      <UseFadeInExample />
+      <UseNetworkExample />
     </div>
   );
 };
